@@ -1,3 +1,5 @@
+import { ObjectId } from 'mongodb';
+
 export type Run = {
   id: number;
   name: string;
@@ -8,7 +10,7 @@ export type Run = {
 };
 
 export type FavoriteRun = {
-  id: number;
+  id: ObjectId;
   runId: number;
   comment: string;
 };
