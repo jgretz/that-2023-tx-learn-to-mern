@@ -8,8 +8,4 @@ strava.config({
   redirect_uri: '',
 });
 
-function configStrava() {
-  return strava;
-}
-
 export default strava;

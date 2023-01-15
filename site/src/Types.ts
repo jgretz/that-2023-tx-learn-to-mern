@@ -4,5 +4,5 @@ export type Run = {
   distance: number;
   time: number;
   heartrate: number;
-  averageSpeed: number;
+  speed: number;
 };

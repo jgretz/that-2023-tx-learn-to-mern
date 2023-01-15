@@ -8,7 +8,7 @@ const runs = [
     distance: 1,
     time: 1,
     heartrate: 1,
-    averageSpeed: 1,
+    speed: 1,
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const runs = [
     distance: 2,
     time: 2,
     heartrate: 2,
-    averageSpeed: 2,
+    speed: 2,
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const runs = [
     distance: 3,
     time: 3,
     heartrate: 3,
-    averageSpeed: 3,
+    speed: 3,
   },
 ] as Run[];
 
