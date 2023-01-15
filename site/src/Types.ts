@@ -4,5 +4,16 @@ export type Run = {
   distance: number;
   time: number;
   heartrate: number;
-  speed: number;
+  pace: number;
+};
+
+export type FavoriteRun = {
+  id: string;
+  runId: number;
+  comment: string;
+};
+
+export type AppState = {
+  selectedRun?: Run;
+  selectRun: (run?: Run) => void;
 };

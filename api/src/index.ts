@@ -12,9 +12,15 @@ async function main() {
   app.use(cors());
   app.use(express.json());
 
-  registerStravaRoutes(app);
-  registerFavoriteRoutes(app);
+  // router
+  const router = express.Router();
 
+  registerStravaRoutes(router);
+  registerFavoriteRoutes(router);
+
+  app.use('/api', router);
+
+  // start
   app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
   });

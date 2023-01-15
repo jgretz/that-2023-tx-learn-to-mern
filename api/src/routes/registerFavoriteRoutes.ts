@@ -1,4 +1,4 @@
-import { Express, Request, response, Response } from 'express';
+import { Router, Request, Response } from 'express';
 import {
   getFavoriteRuns,
   createFavoriteRun,
@@ -47,12 +47,12 @@ async function Delete(req: Request, res: Response) {
   res.send().status(200);
 }
 
-function registerFavoriteRoutes(app: Express) {
-  app.get('/favorites/:id', Get);
-  app.post('/favorites', Create);
-  app.put('/favorites/:id', Update);
-  app.patch('/favorites/:id', Update);
-  app.delete('/favorites/:id', Delete);
+function registerFavoriteRoutes(router: Router) {
+  router.get('/favorites/:id', Get);
+  router.post('/favorites', Create);
+  router.put('/favorites/:id', Update);
+  router.patch('/favorites/:id', Update);
+  router.delete('/favorites/:id', Delete);
 }
 
 export default registerFavoriteRoutes;

@@ -1,4 +1,4 @@
-import { Express, Request, Response } from 'express';
+import { Router, Request, Response } from 'express';
 import { getActivities } from '../services/strava';
 import { mapStravaActivityToRun } from '../services/helpers';
 
@@ -9,8 +9,8 @@ async function Get(req: Request, res: Response) {
   res.send(activities).status(200);
 }
 
-function registerStravaRoutes(app: Express) {
-  app.get('/strava/activities', Get);
+function registerStravaRoutes(router: Router) {
+  router.get('/strava/activities', Get);
 }
 
 export default registerStravaRoutes;
